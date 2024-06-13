@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <h1>Cadastro</h1>
+    <form>
+        Nome: <input type="text" id="nome" />
+        <br />
+        Nome de usuario: <input type="text" id="nomedeusuario" />
+        <br />
+        Email: <input type="text" id="email" />
+        <br />
+        CPF: <input type="number" id="cpf" />
+        <br />
+        Data de Nascimento: <input type="text" id="datadenascimento" />
+        <br />
+        <select id="sexo">
+            <option>Masculino</option>
+            <option>Feminino</option>
+            <option>Outros</option>
+        </select>
+        <br />
+        Endereço: <input type="text" id="endereco"/>
+        <br />
+        Senha: <input type="text" id="senha" />
+
+        <div id="resCadastro"></div>
+
+        <input type="button" value="Cadastro de usuario" onclick="cadastrar()">
+    </form>
+    <script>
+        function cadastrar() {
+            var Nome = window.document.getElementById("nome").value;
+            var Nomedeusuario = window.document.getElementById("nomedeusuario").value;
+            var Email = window.document.getElementById("email").value;
+            var CPF = window.document.getElementById("cpf").value;
+            var Data = window.document.getElementById("datadenascimento").value;
+            var Sexo = window.document.getElementById("sexo").value;
+            var Endereco = window.document.getElementById("endereco").value;
+
+            var resCadastro = window.document.getElementById("resCadastro");
+            resCadastro.innerHTML = `seu nome e ${Nome} <br> seu nome de usuario e ${Nomedeusuario} <br> seu email e ${Email} <br> seu cpf e ${CPF} <br> sua data de nascimento e ${Data} <br> seu sexo e ${Sexo} <br> seu endereço e ${Endereco}`;
+        }
+
+    </script>
+</body>
+
+</html>
